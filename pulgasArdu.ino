@@ -1,4 +1,3 @@
-
 #include <VarSpeedServo.h>
 //botón de trapecio
 const int buttonPin = 8;
@@ -26,12 +25,10 @@ void setup() {
   myservo.attach(servoPin1);   //servo1
   myservo2.attach(servoPin2);  //servo2
   myservo3.attach(servoPin3);  //servo3 pista
-  // boton input:
+  // botones input:
   pinMode(buttonPin, INPUT);   //boton trape
   pinMode(buttonPin2, INPUT);   //boton pesa
   pinMode(buttonPin3, INPUT);   //boton bascula
-
-
 }
 
 void loop() {
@@ -81,6 +78,7 @@ void loop() {
   buttonState = digitalRead(buttonPin);
   if (buttonState == HIGH) {
 
+    //toma envion
     myservo.write(110, 10, true);
     delay(10);
     myservo.write(70, 10, true);
@@ -129,10 +127,10 @@ void loop() {
     myservo.write(95, 20, true);
     delay(10);
     myservo.write(90, 10, true);
-
-    delay(3000);                          //salto
-
-    myservo2.write(120, 110, true);        //cae
+    //salto
+    delay(3000);                          
+    //cae
+    myservo2.write(120, 110, true);        
     delay(10);
     myservo2.write(60, 110, true);
     delay(10);
