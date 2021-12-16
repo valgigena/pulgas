@@ -1,7 +1,6 @@
 {
-    "board": "arduino:avr:nano",
+    "board": "arduino:avr:uno",
     "programmer": "arduino:avrispmkii",
     "port": "COM10",
-    "sketch": "pulgasArdu.ino",
-    "configuration": "cpu=atmega328"
+    "sketch": "pulgasArdu.ino"
 }
